@@ -1,6 +1,7 @@
 import java.util.*;
+import javafx.application.Application;
 
-public class Shapes {
+public class Shapes extends Application {
 
 	public String inputShape() {
 		// accept user input and returns it
