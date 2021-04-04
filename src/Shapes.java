@@ -13,7 +13,6 @@ public class Shapes {
 		// checks what the user entered to output something
 		String shape = inputShape();
 		int shapes = 3;
-		// String shapeString;
 		switch (shapes) {
 		case 1:
 			shape = "circle";
@@ -29,8 +28,8 @@ public class Shapes {
 		System.out.println("Welcome to shapes. To start playing, enter a shape: ");
 		Shapes s = new Shapes();
 		// test input shape
-		// System.out.println(s.inputShape());
 		// test .drawShape takes correct input and outputs something
+		// we know .inputShape() works because .drawShape uses it
 		s.drawShape();
 
 	}
