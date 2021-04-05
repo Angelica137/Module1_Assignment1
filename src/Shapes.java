@@ -8,6 +8,7 @@ import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 
 public class Shapes extends Application {
 
@@ -28,6 +29,9 @@ public class Shapes extends Application {
 
 		// add a label so user knows what is going on
 		Label shapeLabel = new Label("Enter your shape");
+
+		// add a button to submit shape
+		Button shapeButton = new Button();
 
 		// create and configure the stage to create a circle
 		// inputShape();
