@@ -68,7 +68,7 @@ public class Shapes extends Application {
 
 				// add a button to submit shape
 				Button colourButton = new Button();
-				colourButton.setText("Colour circle");
+				colourButton.setText("Colour shape");
 
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
@@ -85,6 +85,22 @@ public class Shapes extends Application {
 				// remove the text field and button
 				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
 
+				// tell the user to enter a colour
+				// add a label so user knows what is going on
+				Label colourLabel = new Label("What colour do you want?");
+				colourLabel.setTextFill(Color.BLUE);
+				colourLabel.setFont(Font.font("Arial", 24));
+
+				// create a text field for shape
+				TextField colourField = new TextField();
+				colourField.setMaxWidth(200);
+
+				// add a button to submit shape
+				Button colourButton = new Button();
+				colourButton.setText("Colour shape");
+
+				root.getChildren().addAll(colourLabel, colourField, colourButton);
+
 			} else if (shapeField.getText().equals("octagon")) {
 				Polygon octagon = new Polygon();
 				octagon.getPoints().addAll(new Double[] { 250.0, 50.0, 350.0, 50.0, 400.0, 100.0, 400.0, 200.0, 350.0, 250.0,
@@ -95,6 +111,22 @@ public class Shapes extends Application {
 
 				// remove the text field and button
 				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
+
+				// tell the user to enter a colour
+				// add a label so user knows what is going on
+				Label colourLabel = new Label("What colour do you want?");
+				colourLabel.setTextFill(Color.BLUE);
+				colourLabel.setFont(Font.font("Arial", 24));
+
+				// create a text field for shape
+				TextField colourField = new TextField();
+				colourField.setMaxWidth(200);
+
+				// add a button to submit shape
+				Button colourButton = new Button();
+				colourButton.setText("Colour shape");
+
+				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
 			} else {
 				Alert errorAlert = new Alert(AlertType.ERROR);
