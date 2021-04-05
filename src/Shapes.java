@@ -21,7 +21,7 @@ public class Shapes extends Application {
 		shapeField.setMaxWidth(200);
 
 		// add a label so user knows what is going on
-		Label shapeLabel = new Label("Enter your shape");
+		Label shapeLabel = new Label("Enter a shape");
 		shapeLabel.setTextFill(Color.BLUE);
 		shapeLabel.setFont(Font.font("Arial", 24));
 
@@ -72,6 +72,7 @@ public class Shapes extends Application {
 			} else {
 				Alert errorAlert = new Alert(AlertType.ERROR);
 				errorAlert.setHeaderText("Invalid input");
+				errorAlert.showAndWait();
 			}
 		});
 
