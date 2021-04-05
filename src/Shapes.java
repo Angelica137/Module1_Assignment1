@@ -72,6 +72,17 @@ public class Shapes extends Application {
 
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
+				colourButton.setOnAction(e1 -> {
+					if (colourField.getText().equals("red")) {
+						circle.setFill(Color.RED);
+					} else {
+						Alert errorAlert = new Alert(AlertType.ERROR);
+						errorAlert.setHeaderText("Invalid input");
+						errorAlert.showAndWait();
+					}
+
+				});
+
 				// draw rectangle
 			} else if (shapeField.getText().equals("rectangle")) {
 
