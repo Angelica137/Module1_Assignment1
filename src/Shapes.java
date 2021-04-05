@@ -49,8 +49,12 @@ public class Shapes extends Application {
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
 				circle.setRadius(50.f);
+
 				// display circle
 				root.getChildren().add(circle);
+
+				// remove the text field and button
+				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
 
 				// draw rectangle
 			} else if (shapeField.getText().equals("rectangle")) {
@@ -61,6 +65,10 @@ public class Shapes extends Application {
 
 				// display rectangle
 				root.getChildren().add(rectangle);
+
+				// remove the text field and button
+				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
+
 			} else if (shapeField.getText().equals("octagon")) {
 				Polygon octagon = new Polygon();
 				octagon.getPoints().addAll(new Double[] { 250.0, 50.0, 350.0, 50.0, 400.0, 100.0, 400.0, 200.0, 350.0, 250.0,
@@ -68,6 +76,9 @@ public class Shapes extends Application {
 
 				// display octagon
 				root.getChildren().add(octagon);
+
+				// remove the text field and button
+				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
 
 			} else {
 				Alert errorAlert = new Alert(AlertType.ERROR);
