@@ -1,4 +1,4 @@
-import java.util.*;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -46,35 +46,32 @@ public class Shapes extends Application {
 		stage.show();
 
 		shapeButton.setOnAction(e -> {
-			// check input and draw shape if input is valid
+			// check input and draw shape if input is valid and draw shape
+			// draw circle
 			if (shapeField.getText().equals("circle")) {
+
 				Circle circle = new Circle();
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
 				circle.setRadius(50.f);
-
+				// display circle
 				root.getChildren().add(circle);
-				/*
-				 * Circle circle = new Circle(40, 40, 30); Group root = new Group(circle); Scene
-				 * scene = new Scene(root, 400, 300);
-				 * 
-				 * stage.setTitle("Your shape"); stage.setScene(scene); stage.show();
-				 * 
-				 * 
-				 * } else if (shapeField.getText().equals("rectangle")) { Rectangle rectangle =
-				 * new Rectangle(200, 100); Group root = new Group(rectangle); Scene scene = new
-				 * Scene(root, 400, 300);
-				 * 
-				 * stage.setTitle("Your shape"); stage.setScene(scene); stage.show();
-				 * 
-				 * } else if (shapeField.getText().equals("octagon")) { Polygon octagon = new
-				 * Polygon(); octagon.getPoints().addAll(new Double[] { 250.0, 50.0, 350.0,
-				 * 50.0, 400.0, 100.0, 400.0, 200.0, 350.0, 250.0, 250.0, 250.0, 200.0, 200.0,
-				 * 200.0, 100.0 }); Group root = new Group(octagon); Scene scene = new
-				 * Scene(root, 600, 600);
-				 * 
-				 * stage.setTitle("Your shape"); stage.setScene(scene); stage.show();
-				 */
+
+				// draw rectangle
+			} else if (shapeField.getText().equals("rectangle")) {
+
+				Rectangle rectangle = new Rectangle();
+
+				// display rectangle
+				root.getChildren().add(rectangle);
+			} else if (shapeField.getText().equals("octagon")) {
+				Polygon octagon = new Polygon();
+				octagon.getPoints().addAll(new Double[] { 250.0, 50.0, 350.0, 50.0, 400.0, 100.0, 400.0, 200.0, 350.0, 250.0,
+						250.0, 250.0, 200.0, 200.0, 200.0, 100.0 });
+
+				// display octagon
+				root.getChildren().add(octagon);
+
 			} else {
 				Alert errorAlert = new Alert(AlertType.ERROR);
 				errorAlert.setHeaderText("Invalid input");
