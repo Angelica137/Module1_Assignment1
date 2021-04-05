@@ -72,12 +72,18 @@ public class Shapes extends Application {
 
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
+				// colour shape
 				colourButton.setOnAction(e1 -> {
-					if (colourField.getText().equals("red")) {
-						circle.setFill(Color.RED);
+					if (colourField.getText().equals("blue")) {
+						circle.setFill(Color.BLUE);
+					} else if (colourField.getText().equals("green")) {
+						circle.setFill(Color.GREEN);
+					} else if (colourField.getText().equals("yellow")) {
+						circle.setFill(Color.YELLOW);
 					} else {
 						Alert errorAlert = new Alert(AlertType.ERROR);
-						errorAlert.setHeaderText("Invalid input");
+						errorAlert.setHeaderText("Invalid colour.");
+						errorAlert.setContentText("Please try blue, green, or yellow.");
 						errorAlert.showAndWait();
 					}
 
@@ -112,6 +118,22 @@ public class Shapes extends Application {
 
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
+				// colour shape
+				colourButton.setOnAction(e1 -> {
+					if (colourField.getText().equals("blue")) {
+						rectangle.setFill(Color.BLUE);
+					} else if (colourField.getText().equals("green")) {
+						rectangle.setFill(Color.GREEN);
+					} else if (colourField.getText().equals("yellow")) {
+						rectangle.setFill(Color.YELLOW);
+					} else {
+						Alert errorAlert = new Alert(AlertType.ERROR);
+						errorAlert.setHeaderText("Invalid colour.");
+						errorAlert.setContentText("Please try blue, green, or yellow.");
+						errorAlert.showAndWait();
+					}
+				});
+
 			} else if (shapeField.getText().equals("octagon")) {
 				Polygon octagon = new Polygon();
 				octagon.getPoints().addAll(new Double[] { 250.0, 50.0, 350.0, 50.0, 400.0, 100.0, 400.0, 200.0, 350.0, 250.0,
@@ -139,9 +161,26 @@ public class Shapes extends Application {
 
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
+				// colour shape
+				colourButton.setOnAction(e1 -> {
+					if (colourField.getText().equals("blue")) {
+						octagon.setFill(Color.BLUE);
+					} else if (colourField.getText().equals("green")) {
+						octagon.setFill(Color.GREEN);
+					} else if (colourField.getText().equals("yellow")) {
+						octagon.setFill(Color.YELLOW);
+					} else {
+						Alert errorAlert = new Alert(AlertType.ERROR);
+						errorAlert.setHeaderText("Invalid colour.");
+						errorAlert.setContentText("Please try blue, green, or yellow.");
+						errorAlert.showAndWait();
+					}
+				});
+
 			} else {
 				Alert errorAlert = new Alert(AlertType.ERROR);
-				errorAlert.setHeaderText("Invalid input");
+				errorAlert.setHeaderText("Invalid shape");
+				errorAlert.setContentText("Please try circle, rectangle, or octagon.");
 				errorAlert.showAndWait();
 			}
 		});
