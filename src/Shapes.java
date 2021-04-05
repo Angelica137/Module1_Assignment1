@@ -70,9 +70,6 @@ public class Shapes extends Application {
 				Button colourButton = new Button();
 				colourButton.setText("Colour circle");
 
-				// create a VBox for the components
-				// VBox root = new VBox(25);
-				// root.setAlignment(Pos.CENTER);
 				root.getChildren().addAll(colourLabel, colourField, colourButton);
 
 				// draw rectangle
