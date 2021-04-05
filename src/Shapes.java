@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class Shapes extends Application {
 
@@ -29,6 +31,8 @@ public class Shapes extends Application {
 
 		// add a label so user knows what is going on
 		Label shapeLabel = new Label("Enter your shape");
+		shapeLabel.setTextFill(Color.BLUE);
+		shapeLabel.setFont(Font.font("Arial", 24));
 
 		// add a button to submit shape
 		Button shapeButton = new Button();
