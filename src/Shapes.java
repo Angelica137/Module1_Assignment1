@@ -55,7 +55,9 @@ public class Shapes extends Application {
 				// draw rectangle
 			} else if (shapeField.getText().equals("rectangle")) {
 
-				Rectangle rectangle = new Rectangle();
+				Rectangle rectangle = new Rectangle(200, 100);
+				rectangle.setX(100.0f);
+				rectangle.setY(100.0f);
 
 				// display rectangle
 				root.getChildren().add(rectangle);
