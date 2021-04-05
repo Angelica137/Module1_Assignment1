@@ -6,6 +6,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 public class Shapes extends Application {
 
@@ -19,6 +21,14 @@ public class Shapes extends Application {
 
 	@Override
 	public void start(Stage stage) {
+
+		// create a text field for shape
+		TextField shapeField = new TextField();
+		shapeField.setMaxWidth(200);
+
+		// add a label so user knows what is going on
+		Label shapeLabel = new Label("Enter your shape");
+
 		// create and configure the stage to create a circle
 		// inputShape();
 
