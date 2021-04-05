@@ -56,6 +56,25 @@ public class Shapes extends Application {
 				// remove the text field and button
 				root.getChildren().removeAll(shapeLabel, shapeField, shapeButton);
 
+				// tell the user to enter a colour
+				// add a label so user knows what is going on
+				Label colourLabel = new Label("What colour do you want?");
+				colourLabel.setTextFill(Color.BLUE);
+				colourLabel.setFont(Font.font("Arial", 24));
+
+				// create a text field for shape
+				TextField colourField = new TextField();
+				colourField.setMaxWidth(200);
+
+				// add a button to submit shape
+				Button colourButton = new Button();
+				colourButton.setText("Colour circle");
+
+				// create a VBox for the components
+				// VBox root = new VBox(25);
+				// root.setAlignment(Pos.CENTER);
+				root.getChildren().addAll(colourLabel, colourField, colourButton);
+
 				// draw rectangle
 			} else if (shapeField.getText().equals("rectangle")) {
 
