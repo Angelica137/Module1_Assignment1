@@ -36,7 +36,7 @@ public class Shapes extends Application {
 		// create a scene and add to stage
 		Scene scene = new Scene(root, 600, 600);
 		stage.setScene(scene);
-		stage.setTitle("Shpaes");
+		stage.setTitle("Shapes");
 		stage.show();
 
 		shapeButton.setOnAction(e -> {
